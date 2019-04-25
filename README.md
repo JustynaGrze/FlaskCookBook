@@ -2,40 +2,69 @@
 # CookBook
  
 ## Overview
-Website created for a people who want to find .
-Interactive Frintend Development; design focused on simplicity and user friendlyness. 
+Website created for a people who want to find and create great recipes.
+Interactive Front and Back-END Development; design focused on simplicity and user friendlyness.
 
- 
+### Users:
+As a user I should be able to :
+-see the homepage with with cover photo and categories.
+-see the main navigation bar with links which take them to different categories
+-to see all recipes on separate website
+-to search through the recipes by alergens, cousine,category,restrictions
+-add button to allow users to create a new recipe.
+-edit and delete the recipe  
+
+As a user who whats to add new recipe I should:
+- see a responsive form
+- be able to add the: titile,description, category,cousine,rectrictions, alergens, ingedients, instruction, serves, preparation time, cooking time and add link to the recipe picture.
+- see the submit button
+- after adding the repice it takes me to the web with all recipes.
+
+As a user who has an alergy I should be able:
+-to look through the alergens and choose a safe recipe for me
+
+
 ### What is this website for?
 Website is aiming:
--at all age audience
--people who want to play simple and quick game for free. 
-The purpose of this website is for the vistor to be able to play, visit place where he can buy the game or read about it.
+-people who love to cook, and what to have all recipes in one place
+The purpose of this website is for the vistor to be able to look for a recipe, add new recipe.
  
 
 ### How does it work
-Based on Bootstrap 3.3.7 framework.
-The site uses:Bootstrap style with some customizations, Javascript,JQuery, HTML and CSS.
+Based on Materialize framework.
+The site uses: Materialize style with some customizations, Javascript,JQuery, HTML and CSS, Flask, MongoDB.
 
 ## Features
  
 ### Existing Features
-- Navbar - enables visitor to check link where he can buy the game and read about it.
-- Home page - contains an eye-catching game board and short description of the game.
-- Links - enables visitor to check my social media.
+- Navbar - enables visitor to navigate through the page easily(add recipe, loop through categories)
+- Drag out menu on the mobile device
+- Home page - contains an eye-catching cover photo and categories with links which enalbes user to get a quick access to the recipes.
+- Form - allows user to add new recipe
+- Image cards- they contain eye-catching food images with the title and link 
+- Add button - allows user to add a new reciope very quickly 
+- Delete Recipe
+- Edit Recipe
+
 
 ### Features Left to Implement
-- None
+-Implement search on the navbar
+-Export to PDF
+
+
 
 ## Tech Used
 
 ### Some the tech used includes:
 - **HTML**, **CSS** and **Javascript** 
   - Base languages used to create website
-- [Bootstrap](http://getbootstrap.com/)
-    - I used **Bootstrap** to give our project a simple, responsive layout
+- [Materialize](https://materializecss.com/)
+    - I used **Materialzie ** to give our project a simple, responsive layout
 - [JQuery](https://jquery.com)
     - **JQuery** 
+-[Flask](http://flask.pocoo.org/)
+-[MongoDB](https://www.mongodb.com/)
+-[Heroku] (https://dashboard.heroku.com)
 
 ## Testing
 - All code used on the site has been tested to ensure everything is working as expected
@@ -50,19 +79,18 @@ The site uses:Bootstrap style with some customizations, Javascript,JQuery, HTML 
 All contributions to improving our code and accept pull requests are welcome.
  
 ### Deployment
-1.Clone this repository by opening your Terminal, change the current working directory to the location where you want the cloned directory to be made.
-    2.Type $ git clone " https://justynagrze.github.io/SIMON-GAME/." and hit Enter. Your repository will be ready.
-3.Run the index.html, open in a broswer and the page will display
+1. Live version of the website available: https://recipe-app-flask-justynagrzeszczyk91.c9users.io.
+2. to deploy this app you have to:
+-Set up a new instance of a Heroku app, along with MongoDB Atlas instance.
+-Install Flask, PyMongo
+-Clone this repository by opening your Terminal, change the current working directory to the location where you want the cloned directory to be made.
+-Type $ git clone "" and hit Enter. Your repository will be ready.
+-Run the app.py on python3 server and open in a broswer and the page will display
 
 ## Credits
 
 ### Media
-- The photos used in this site were obtained from: https://www.shutterstock.com/
-- The sounds used on this site: "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3",
-                                "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3",
-                                "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3",
-                                "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"
-
+- The photos used in this site were obtained from: https://www.pexels.com/search/food/
 
 
 ## Developer
@@ -74,4 +102,5 @@ Justyna Grzeszczyk (email:justyna.grzeszczyk91@gmail.com)
     - stack overflow
     - wikipedia
     - youtube
+    - https://docs.mongodb.com/
    
