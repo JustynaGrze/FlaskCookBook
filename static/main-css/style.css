@@ -1,0 +1,66 @@
+/*.................................................General*/
+
+body {
+
+}
+
+nav {
+    background-color: #20B2AA;
+}
+
+
+
+
+/*.....................................................Images*/ 
+
+.container-img {
+    min-width: 100%;
+
+}
+
+
+/*.....................................................Footer*/ 
+.page-footer {
+    background-color: #20B2AA;
+    padding-top: 0; 
+    
+}
+
+#btn-add{
+ margin-bottom:40px;
+ margin-left: 10px;
+}
+
+.copyright-text{
+    text-align: center;
+    
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    color: white;
+    text-align: center;
+}
+
+
+/*.....................................................Form*/
+form {
+    margin-bottom: 91px;
+}
+
+.material-icons  {
+    color: #F08080;
+}
+
+
+/*....................................................Card images*/
+
+.all_recipes {
+    height: 150px;
+}
+
+.categories_home {
+    height: 180px;
+}
+.cuisine_img {
+    height: 300px;
+}
