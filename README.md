@@ -84,7 +84,7 @@ All contributions to improving our code and accept pull requests are welcome.
 -Set up a new instance of a Heroku app, along with MongoDB Atlas instance.
 -Install Flask, PyMongo
 -Clone this repository by opening your Terminal, change the current working directory to the location where you want the cloned directory to be made.
--Type $ git clone "https://github.com/JustynaGrze/CookBook.git" and hit Enter. Your repository will be ready.
+-Type $ git clone "https://github.com/JustynaGrze/FlaskCookBook.git" and hit Enter. Your repository will be ready.
 -Run the app.py on python3 server and open in a broswer and the page will display
 
 ## Credits
