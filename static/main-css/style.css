@@ -1,14 +1,12 @@
 /*.................................................General*/
 
 body {
-
+    font-family:'Lora', serif;
 }
 
 nav {
     background-color: #20B2AA;
 }
-
-
 
 
 /*.....................................................Images*/ 
@@ -50,12 +48,14 @@ form {
 .material-icons  {
     color: #F08080;
 }
-
+.button_add {
+    margin-bottom: 5px;
+}
 
 /*....................................................Card images*/
 
 .all_recipes {
-    height: 150px;
+    height: 170px;
 }
 
 .categories_home {
@@ -63,4 +63,32 @@ form {
 }
 .cuisine_img {
     height: 300px;
+}
+
+
+.card .card-image .card-title {
+    font-weight: bold;
+}
+
+.card-action {
+    height: 100px;
+}
+
+
+/*.........................................................Recipe Page*/
+
+.recipe_text {
+    font-weight: bold;
+}
+
+/*.........................................................Recipe Page*/
+
+@media (max-width: 760px){
+  .card-action {
+    height: 80px;
+    }
+
+    .all_recipes {
+    height: 200px;
+    }
 }

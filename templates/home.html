@@ -1,31 +1,33 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
 
-<div class= "container main-image">
-    <div class="container-img">
-        <img id="image" src="/static/img/fruit.jpg" class="responsive-img">
-        <div>
-            <h5 class="center-align">Great Reciepes In One Place</h5>
-        </div>
-        <div class="centered-img-mobile hide-on-med-and-up">
+{% block content %}
 
-        </div>
-    </div>
-</div>
-<div class="container ">
-    <div class="row">
-        {% for category in categries %}
-        <div class="col s12 m4">
-            <div class="card red lighten-2 hoverable">
-                <div class="card-image">
-                    <img class= "categories_home" src="{{category.picture}}" class="responsive-img">
-                </div>
-                <div class="card-action card-action-bgcolor">
-                    <a href="{{url_for('category_single', category_name=category.category_name)}}" class="hvr-grow">{{category.category_name}}</a>
-                </div>
+    <div class= "container main-image">
+        <div class="container-img">
+            <img id="image" src="/static/img/fruit.jpg" class="responsive-img">
+            <div>
+                <h5 class="center-align">Great Reciepes In One Place</h5>
+            </div>
+            <div class="centered-img-mobile hide-on-med-and-up">
+    
             </div>
         </div>
-        {% endfor %}
-  
-</div>
+    </div>
+    <div class="container ">
+        <div class="row">
+            {% for category in categries %}
+            <div class="col s12 m6 l4">
+                <div class="card red lighten-2 hoverable">
+                    <div class="card-image">
+                        <img class= "categories_home" src="{{category.picture}}" class="responsive-img">
+                    </div>
+                    <div class="card-action card-action-bgcolor">
+                        <a href="{{url_for('category_single', category_name=category.category_name)}}" class="hvr-grow">{{category.category_name}}</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 
 {% endblock %}

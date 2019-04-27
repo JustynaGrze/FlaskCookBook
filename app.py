@@ -144,6 +144,8 @@ def update_recipe(recipe_id):
         "preparation_time": request.form.get('preparation_time'),
         "cuisine_name": request.form.get('cuisine_name'),
         "alergen_name": request.form.getlist('alergen_name'),
+        "picture": request.form.get("picture"),
+        "category_name": request.form.getlist("category_name"),
     })
     return redirect(url_for('get_recipes'))
 

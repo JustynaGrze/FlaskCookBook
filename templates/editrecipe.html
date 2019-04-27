@@ -6,7 +6,7 @@
         <div class="row">
             <div class="row">
                 <div class="input-field col s12" id="recipe_category">
-                    <i class="material-icons prefix ">import_contacts</i>
+                    <i class="material-icons prefix ">menu</i>
                     <select id="category" name="category_name">
                   <option value="" disabled selected> Choose Category</option>
                   {% for cat in categries %}
@@ -22,7 +22,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12" id="recipe_cuisine">
-                    <i class="material-icons prefix ">more_vert</i>
+                    <i class="material-icons prefix ">menu</i>
                     <select id="cuisine" name="cuisine_name">
                   <option value="" disabled selected> Choose Cuisine</option>
                   {% for cui in cuisines %}
@@ -38,7 +38,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12" id="recipe_meal">
-                    <i class="material-icons prefix ">more_vert</i>
+                    <i class="material-icons prefix ">menu</i>
                     <select multiple id="meal" name="meal_type_name">
                   <option value="" disabled selected> Choose Restrictions</option>
                   {% for m in meal_types %}
@@ -57,7 +57,7 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">format_list_bulleted</i>
+                <i class="material-icons prefix">description</i>
                 <textarea name="description" id="description" class="materialize-textarea" >{{recipe.description}}</textarea>
                 <label for="icon_telephone">Recipe Description </label>
             </div>
@@ -65,26 +65,39 @@
 
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">format_list_bulleted</i>
-                <textarea name="ingredients" id="ingredients" class="materialize-textarea">{{recipe.ingredients}}</textarea>
+                <i class="material-icons prefix">playlist_add</i>
+                {% for i in recipe.ingredients %}
+                <textarea name="ingredients" id="ingredients" class="materialize-textarea">{{i}}</textarea>
+                {% endfor %}
                 <label for="icon_telephone">Recipe Ingredients</label>
-
+                <div id='TextBoxesGroup' >
+                    <!--<div id="TextBoxDiv1">-->
+                        <!--<label>Ingredient #1 : </label><input type='textbox' id='textbox1'>-->
+                    <!--</div>-->
+                </div>
+                
+                <input type='button' class="waves-effect waves-light btn button_add" value='Add Ingredient' id='addButton'>
+                <input type='button' class="waves-effect waves-light btn button_add" value='Remove Ingredient' id='removeButton'>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">format_align_justify</i>
+                <i class="material-icons prefix">note</i>
                 <textarea name="method" id="method" class="materialize-textarea" >{{recipe.method}}</textarea>
                 <label for="icon_telephone">Instruction</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12" id="recipe_alergen">
-                <i class="material-icons prefix ">more_vert</i>
+                <i class="material-icons prefix ">menu</i>
                 <select multiple id="alergen" name="alergen_name">
               <option value="" disabled selected> Choose Alergen</option>
               {% for a in alergens %}
-                  <option value="{{a.alergen_name}}">{{a.alergen_name}}</option>
+                  {% if a.alergen_name == recipe.alergen_name %}
+                  <option value="{{a.alergen_name}} " selected >{{a.alergen_name}}</option>
+                  {% else %}
+                  <option value="{{a.alergen_name}} ">{{a.alergen_name}}</option>
+                  {% endif %}
               {% endfor %}
             </select>
                 <label>Alergen</label>
@@ -92,28 +105,25 @@
         </div>
         <div class="row">
             <div class="col s6 l3 input-field">
+                <i class="material-icons prefix ">face</i>
                 <input id="serves" name="serves" type="number" value="{{recipe.serves}}" required>
                 <label for="recipe_serves">Serves</label>
             </div>
             <div class="col s6 l3 input-field">
+                <i class="material-icons prefix ">av_timer</i>
                 <input id="preparation_time" name="preparation_time" type="number" value="{{recipe.preparation_time}}" required>
                 <label for="preparation_time">Preparation time(minutes)</label>
             </div>
             <div class="col s6 l3 input-field">
+                <i class="material-icons prefix ">av_timer</i>
                 <input id="cooking_time" name="cooking_time" type="number" value="{{recipe.cooking_time}}" required>
                 <label for="cooking_time">Cooking time(minutes)</label>
             </div>
         </div>
-        <div class="row">
-            <div class="file-field input-field">
-                <div class="btn">
-                    <span>File</span>
-                    <input type="file" id="picture" name="picture">
-                </div>
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text">
-                </div>
-            </div>
+       <div class="input-field col s12">
+            <i class="material-icons prefix ">photo</i>
+            <input id="title" name="picture" type="text" value="{{recipe.picture}}">
+            <label for="icon_prefix">Paste The Image Link</label>
         </div>
         <div class="row">
             <button class="btn waves-effect waves-light" type="submit" name="action">Add changes

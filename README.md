@@ -8,7 +8,7 @@ Interactive Front and Back-END Development; design focused on simplicity and use
 ### Users:
 As a user I should be able to :
 -see the homepage with with cover photo and categories.
--see the main navigation bar with links which take them to different categories
+-see the main navigation bar with links which take me to different categories
 -to see all recipes on separate website
 -to search through the recipes by alergens, cousine,category,restrictions
 -add button to allow users to create a new recipe.
@@ -18,7 +18,7 @@ As a user who whats to add new recipe I should:
 - see a responsive form
 - be able to add the: titile,description, category,cousine,rectrictions, alergens, ingedients, instruction, serves, preparation time, cooking time and add link to the recipe picture.
 - see the submit button
-- after adding the repice it takes me to the web with all recipes.
+- after adding the recipe it takes me to the web with all recipes.
 
 As a user who has an alergy I should be able:
 -to look through the alergens and choose a safe recipe for me
@@ -38,7 +38,7 @@ The site uses: Materialize style with some customizations, Javascript,JQuery, HT
  
 ### Existing Features
 - Navbar - enables visitor to navigate through the page easily(add recipe, loop through categories)
-- Drag out menu on the mobile device
+- Drag out menu - on the mobile device
 - Home page - contains an eye-catching cover photo and categories with links which enalbes user to get a quick access to the recipes.
 - Form - allows user to add new recipe
 - Image cards- they contain eye-catching food images with the title and link 
@@ -50,7 +50,7 @@ The site uses: Materialize style with some customizations, Javascript,JQuery, HT
 ### Features Left to Implement
 -Implement search on the navbar
 -Export to PDF
-
+-Enable user to create their own account
 
 
 ## Tech Used
@@ -80,17 +80,18 @@ All contributions to improving our code and accept pull requests are welcome.
  
 ### Deployment
 1. Live version of the website available: https://recipe-app-flask-justynagrzeszczyk91.c9users.io.
-2. to deploy this app you have to:
+2. To deploy this app you have to:
 -Set up a new instance of a Heroku app, along with MongoDB Atlas instance.
 -Install Flask, PyMongo
 -Clone this repository by opening your Terminal, change the current working directory to the location where you want the cloned directory to be made.
--Type $ git clone "" and hit Enter. Your repository will be ready.
+-Type $ git clone "https://github.com/JustynaGrze/CookBook.git" and hit Enter. Your repository will be ready.
 -Run the app.py on python3 server and open in a broswer and the page will display
 
 ## Credits
 
 ### Media
-- The photos used in this site were obtained from: https://www.pexels.com/search/food/
+- The photos used in this site were obtained from: https://www.pexels.com/search/food/ and https://www.bbc.com/food/recipes
+- The recipes use in this site ver obtained from : https://www.bbc.com/food/recipes
 
 
 ## Developer
