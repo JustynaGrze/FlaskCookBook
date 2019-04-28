@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col s12 m6">
+  <h2 class="header">{{recipe.title}}</h2>
+  <div class="card horizontal">
+    <div class="card-image ">
+      <img class= "recipe_picture" src="{{ recipe.picture}}">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content recipe_text">
+        <p>{{ recipe.description }}</p><br>
+        <p><span>Serves: </span>{{ recipe.serves }}</p><br>
+        <p><span>Cooking time: </span>{{ recipe.cooking_time }} minutes</p><br>
+        <p><span>Preparation time: </span>{{ recipe.preparation_time}} minutes</p>
+        <p><span>Cuisine: </span> {{ recipe.cuisine_name}}</p>
+        <p><span>Alergen: </span>
+          <ul>
+            {% for alergen in recipe.alergen_name %}
+            <li>{{alergen}}</li>
+            {%endfor%}
+          </ul>
+        </p>  
+        
+      </div>
+      <div class="card-action">
+        <a href="">This is a link</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12 m6">
+    <div class="card-panel teal">
+      <span class="white-text">Ingredients</span>
+      <div class="divider"> </div>
+      <ul  class="white-text">
+        {% for ingredient in recipe.ingredients %}
+        <li>{{ingredient}}</li>
+        {%endfor%}
+      </ul>
+    </div>
+  </div>
+  <div class="col s12 m6">
+    <div class="card-panel teal">
+      <span class="white-text">Instructions</span>
+      <div class="divider"> </div>
+      <p class="white-text">{{ recipe.method}}</p>
+    </div>
+  </div>
+  
+</div>
+<div class= "row">
+  <a href= "{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+  <a href= "{{url_for('delete_recipe', recipe_id = recipe._id)}}" class="waves-effect waves-light btn btn_small">Delete</a>
+</div>
+            
+{% endblock %}   
+    

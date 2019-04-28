@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="row">
+    {% for a in alergen %}
+    <div class="col s12 m5">
+        <div class="card red lighten-2 hoverable">
+            <div class="card-image">
+                <img class= "cuisine_img" src="{{a.picture}}" class="responsive-img">
+            </div>
+            <div class="card-action card-action-bgcolor">
+                <a href="{{url_for('alergen_single', alergen_name=a.alergen_name)}}" class="hvr-grow">{{a.alergen_name}}</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
