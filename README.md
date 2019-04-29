@@ -79,7 +79,7 @@ The site uses: Materialize style with some customizations, Javascript,JQuery, HT
 All contributions to improving our code and accept pull requests are welcome.
  
 ### Deployment
-1. Live version of the website available: https://cook-book-flask-mongodb.herokuapp.com/add_recipe.
+1. Live version of the website available: https://cook-book-flask-mongodb.herokuapp.com/.
 2. To deploy this app you have to:
 -Set up a new instance of a Heroku app, along with MongoDB Atlas instance.
 -Install Flask, PyMongo
